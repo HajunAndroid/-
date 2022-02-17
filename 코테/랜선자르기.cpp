@@ -28,7 +28,7 @@ bool promising(int dist)
 		return false;
 }
 
-void Solution()
+void Solve()
 {
 	long long low = 1;
 	long long high = arr[k - 1];
@@ -48,7 +48,7 @@ void Solution()
 void Solve()
 {
 	Input();
-	Solution();
+	Solve();
 }
 
 int main()

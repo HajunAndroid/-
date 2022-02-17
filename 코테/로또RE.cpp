@@ -3,12 +3,14 @@
 #define MAX 14
 using namespace std;
 
-int arr[MAX];
 int k;
-bool choose[MAX];
+int arr[MAX];
+bool visited[MAX];
 
 void Input()
 {
+	memset(arr, 0, sizeof(arr));
+	memset(visited, 0, sizeof(visited));
 	for (int i = 1; i <= k; i++) {
 		cin >> arr[i];
 	}
@@ -18,16 +20,16 @@ void DFS(int idx, int cnt)
 {
 	if (cnt == 6) {
 		for (int i = 1; i <= k; i++) {
-			if (choose[i])
+			if (visited[i])
 				cout << arr[i] << " ";
 		}
-		cout << endl;
+		cout << '\n';
 		return;
 	}
 	for (int i = idx; i <= k; i++) {
-		choose[i] = 1;
+		visited[i] = 1;
 		DFS(i + 1, cnt + 1);
-		choose[i] = 0;
+		visited[i] = 0;
 	}
 }
 
@@ -38,13 +40,12 @@ void Solve()
 
 void Solve()
 {
-	while (true) {
+	while (1) {
 		cin >> k;
-		if (k == 0)break;
-		memset(choose, 0, sizeof(choose));
+		if (k == 0)return;
 		Input();
 		Solve();
-		cout << endl;
+		cout << '\n';
 	}
 }
 

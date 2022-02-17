@@ -13,7 +13,7 @@ void Input()
 	cin >> a >> b;
 }
 
-void Solution()
+void Solve()
 {
 	int a_size = strlen(a);
 	int b_size = strlen(b);
@@ -34,7 +34,7 @@ void Solution()
 void Solve()
 {
 	Input();
-	Solution();
+	Solve();
 }
 
 int main()

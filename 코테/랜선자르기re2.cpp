@@ -3,56 +3,51 @@
 #define MAX 10001
 using namespace std;
 
-int n, k;
+int k, n;
 int arr[MAX];
+
+int temp;
 
 void Input()
 {
-	cin >> n >> k;
-	for (int i = 1; i <= n; i++) {
+	cin >> k >> n;
+	for (int i = 1; i <= k; i++) {
 		cin >> arr[i];
+		temp = max(temp, arr[i]);
 	}
-	sort(arr + 1, arr + n + 1);
 }
 
-
-bool Promissing(int mid)
+bool Promising(int len)
 {
-	int cnt = 0;
-	for (int i = 1; i <= n; i++) {
-		cnt += (arr[i] / mid);
+	int sum = 0;
+	for (int i = 1; i <= k; i++) {
+		sum += (arr[i] / len);
 	}
-	if (cnt >= k) {
-		return true;
-	}
+	if (sum >= n)return true;
 	return false;
 }
 
-void Solve()
+void Solution()
 {
 	long long low = 1;
-	long long high = arr[n];
+	long long high = temp;
 	long long mid;
-	long long answer = 0;
 	while (low <= high) {
 		mid = (low + high) / 2;
-		if (Promissing(mid)) {
+		if (Promising(mid)) {
 			low = mid + 1;
-			if (answer < mid) {
-				answer = mid;
-			}
 		}
 		else {
 			high = mid - 1;
 		}
 	}
-	cout << answer;
+	cout << high;
 }
 
 void Solve()
 {
 	Input();
-	Solve();
+	Solution();
 }
 
 int main()

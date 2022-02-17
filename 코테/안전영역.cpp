@@ -46,7 +46,7 @@ void BFS(int x, int y, int h)
 	}
 }
 
-void Solution()
+void Solve()
 {
 	int ans=0;
 	for (int h = 0; h <= H; h++) {
@@ -69,7 +69,7 @@ void Solution()
 void Solve()
 {
 	Input();
-	Solution();
+	Solve();
 }
 
 int main()

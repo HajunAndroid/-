@@ -69,7 +69,7 @@ void BFS(int x, int y)
 	}
 }
 
-void Solution()
+void Solve()
 {
 	int year = 0;
 	while (!IsFinsh()) {
@@ -96,7 +96,7 @@ void Solution()
 void Solve()
 {
 	Input();
-	Solution();
+	Solve();
 }
 
 int main()
