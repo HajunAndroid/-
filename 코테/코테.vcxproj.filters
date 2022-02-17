@@ -399,6 +399,9 @@
     <ClCompile Include="2022_나무재테크.cpp">
       <Filter>소스 파일\2022RE</Filter>
     </ClCompile>
+    <ClCompile Include="2022_낚시왕.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
