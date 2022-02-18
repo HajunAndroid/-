@@ -402,6 +402,27 @@
     <ClCompile Include="2022_낚시왕.cpp">
       <Filter>소스 파일\2022RE</Filter>
     </ClCompile>
+    <ClCompile Include="2022_인구이동.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_거스름돈.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_떡먹는호랑이.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_문서검색.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_방배정하기cpp.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_부녀회장이될테야.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_색종이만들기.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
