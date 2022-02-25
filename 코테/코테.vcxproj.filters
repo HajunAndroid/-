@@ -459,6 +459,12 @@
     <ClCompile Include="2022_어른상어.cpp">
       <Filter>소스 파일\2022RE</Filter>
     </ClCompile>
+    <ClCompile Include="2022_구명보트.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_네트워크.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
