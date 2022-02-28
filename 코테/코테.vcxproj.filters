@@ -465,6 +465,15 @@
     <ClCompile Include="2022_네트워크.cpp">
       <Filter>소스 파일\2022RE</Filter>
     </ClCompile>
+    <ClCompile Include="2022_스타트택시.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_단속카메라.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_단어변환.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
