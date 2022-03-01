@@ -474,6 +474,15 @@
     <ClCompile Include="2022_단어변환.cpp">
       <Filter>소스 파일\2022RE</Filter>
     </ClCompile>
+    <ClCompile Include="2022_디스크컨트롤러.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_소수찾기.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_연산자끼워넣기.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
