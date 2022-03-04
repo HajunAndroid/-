@@ -501,6 +501,12 @@
     <ClCompile Include="혁진이의 프로그램 검증.cpp">
       <Filter>소스 파일\2022New</Filter>
     </ClCompile>
+    <ClCompile Include="종구의 딸이름 짓기.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
+    <ClCompile Include="준환이의 양팔저울.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
