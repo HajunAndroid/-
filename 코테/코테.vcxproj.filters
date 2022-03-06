@@ -507,6 +507,18 @@
     <ClCompile Include="준환이의 양팔저울.cpp">
       <Filter>소스 파일\2022New</Filter>
     </ClCompile>
+    <ClCompile Include="re_준환이의 양팔저울.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
+    <ClCompile Include="re_종구의 딸 이름 짓기.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
+    <ClCompile Include="re_혁진이의 프로그램 검증.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
+    <ClCompile Include="re_우편함.cpp">
+      <Filter>소스 파일\2022New</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
