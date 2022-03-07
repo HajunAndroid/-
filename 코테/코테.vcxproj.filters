@@ -519,6 +519,18 @@
     <ClCompile Include="re_우편함.cpp">
       <Filter>소스 파일\2022New</Filter>
     </ClCompile>
+    <ClCompile Include="2022_조합.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_순열.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_중복조합.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="2022_중복순열.cpp">
+      <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
