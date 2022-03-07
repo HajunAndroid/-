@@ -1,34 +1,28 @@
 #include<iostream>
-#include<string>
-#include<cstring>
 #include<queue>
-
-#define MAX 25
+#include<cstring>
 using namespace std;
 
-int n, m;
-bool finish_mark;
-bool visit[MAX][MAX][4][16];
-char map[MAX][MAX];
-string answer;
+int r, c;
+char map[20][20];
+int x, y, dir,memo;
+bool visit[20][20][4][16];
 
-int dx[] = { 0,0,1,-1 };
-int dy[] = { 1,-1,0,0 };
+int dx[] = { 0,0,-1,1 };
+int dy[] = { -1,1,0,0 };
 
 void Initialize()
 {
-	finish_mark = false;
-	memset(visit, false, sizeof(visit));
+	x = 0; y = 0; dir = 1; memo = 0;
+	memset(visit, 0, sizeof(visit));
 }
 
 void Input()
 {
-	cin >> n >> m;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
+	cin >> r >> c;
+	for (int i = 0; i < r; i++) {
+		for (int j = 0; j < c; j++) {
 			cin >> map[i][j];
-			if (map[i][j] == '@')
-				finish_mark = true;
 		}
 	}
 }
@@ -36,76 +30,81 @@ void Input()
 void Solution()
 {
 	queue<pair<pair<int, int>, pair<int, int>>>q;
-	q.push({ {0,0},{0,0} });
-	visit[0][0][0][0] = true;
-
+	q.push({ {0,0},{1,0} });
+	visit[0][0][1][0] = true;
 	while (!q.empty()) {
 		int x = q.front().first.first;
 		int y = q.front().first.second;
 		int dir = q.front().second.first;
-		int memory = q.front().second.second;
+		int meno = q.front().second.second;
 		q.pop();
-		if (map[x][y] == '@') {
-			answer = "YES";
-			return;
-		}
 		char c = map[x][y];
-		int nDir, nMemory;
-		nDir = dir;
-		nMemory = memory;
-		if (c == '<')nDir = 1;
-		else if (c == '>')nDir = 0;
-		else if (c == '^')nDir = 3;
-		else if (c == 'v')nDir = 2;
-		else if (c == '_')nDir = memory == 0 ? 0 : 1;
-		else if (c == '|')nDir = memory == 0 ? 2 : 3;
-		else if (c == '+')nMemory = memory + 1 == 16 ? 0 : memory + 1;
-		else if (c == '-')nMemory = memory - 1 == -1 ? 15 : memory - 1;
-		else if ('0' <= c && c <= '9')nMemory = c - '0';
-
-		if (c == '?') {
+		bool flag = false;
+		if (c == '<')dir = 0;
+		else if (c == '>')dir = 1;
+		else if (c == '^')dir = 2;
+		else if (c == 'v')dir = 3;
+		else if (c == '_')dir = memo == 0 ? 1 : 0;
+		else if (c == '|')dir = memo == 0 ? 3 : 2;
+		else if (c == '?') {
 			for (int i = 0; i < 4; i++) {
 				int nx = x + dx[i];
 				int ny = y + dy[i];
-				
-				if (nx < 0)nx = n - 1;
-				else if (nx == n)nx = 0;
-				if (nx < 0)ny = m - 1;
-				else if (ny == m)ny = 0;
-
-				if (visit[nx][ny][i][nMemory] == false) {
-					visit[nx][ny][i][nMemory] = true;
-					q.push({ {nx,ny},{i,nMemory} });
+				if (nx < 0)nx = r - 1;
+				else if (nx >= r)nx = 0;
+				if (ny < 0)ny = c - 1;
+				else if (ny >= c)ny = 0;
+				if (visit[nx][ny][dir][memo] == true)continue;
+				if (map[nx][ny] == '@') {
+					cout << "YES"; return;
 				}
+				visit[nx][ny][dir][memo] = true;
+				q.push({ {nx,ny},{dir,memo} });
+				flag = true;
 			}
 		}
-		else {
-			int nx = x + dx[nDir];
-			int ny = y + dy[nDir];
-
-			if (nx < 0)nx = n - 1;
-			else if (nx == n)nx = 0;
-			if (nx < 0)ny = m - 1;
-			else if (ny == m)ny = 0;
-
-			if (visit[nx][ny][nDir][nMemory] == false) {
-				visit[nx][ny][nDir][nMemory] = true;
-				q.push({ {nx,ny},{nDir,nMemory} });
-			}
+		else if (c == '.') {
+			//Nothing
 		}
+		else if (c == '@') {
+			cout << "YES";
+			return;
+		}
+		else if (c >= '0' && c <= '9') {
+			memo = c - '0';
+		}
+		else if (c == '+') {
+			memo++; if (memo == 16)memo = 0;
+		}
+		else if (c == '-') {
+			memo--; if (memo == -1)memo = 15;
+		}
+		if (flag)continue;
+		x = x + dx[dir];
+		y = y + dy[dir];
+		if (x < 0)x = r - 1;
+		else if (x >= r)x = 0;
+		if (y < 0)y = c - 1;
+		else if (y >= c)y = 0;
+		if (visit[x][y][dir][memo] == true)continue;
+		if (map[x][y] == '@') {
+			cout << "YES"; return;
+		}
+		visit[x][y][dir][memo] = true;
+		q.push({ {x,y},{dir,memo} });
 	}
-	answer = "No";
+	cout<<"NO";
 }
 
 void Solve()
 {
-	int t; cin >> t;
-	for (int i = 1; i <= t; i++) {
+	int tc; cin >> tc;
+	for (int i = 1; i <= tc; i++) {
 		Initialize();
 		Input();
+		cout << "#" << i << " ";
 		Solution();
-
-		cout << "#" << i << " " << answer << endl;
+		cout << endl;
 	}
 }
 
@@ -113,7 +112,6 @@ int main()
 {
 	ios::sync_with_stdio(0);
 	cin.tie(NULL); cout.tie(NULL);
-
 	Solve();
 	return 0;
 }

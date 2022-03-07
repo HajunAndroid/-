@@ -3,7 +3,7 @@
 using namespace std;
 
 int Answer;
-bool Select[8];
+bool visit[8];
 char ItoC[8] = { 'A','C','F','J','M','N','R','T' };
 
 void DFS(int Cnt, char Arr[], vector<string> data)
@@ -37,11 +37,11 @@ void DFS(int Cnt, char Arr[], vector<string> data)
 
     for (int i = 0; i < 8; i++)
     {
-        if (Select[i] == true) continue;
-        Select[i] = true;
+        if (visit[i] == true) continue;
+        visit[i] = true;
         Arr[Cnt] = ItoC[i];
         DFS(Cnt + 1, Arr, data);
-        Select[i] = false;
+        visit[i] = false;
     }
 }
 

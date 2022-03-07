@@ -1,51 +1,50 @@
 #include<iostream>
-#include<queue>
 #include<cstring>
-
-#define endl "\n"
-#define MAX 1010
-#define MAIL_MAX 105
+#include<queue>
 using namespace std;
 
-int N, A, B;
-int Answer[MAIL_MAX];
-bool Mail[MAX];
+bool timeArr[1001];
+int timeAns[101];
+
+int n, a, b;
 
 void Initialize()
 {
-	memset(Mail, false, sizeof(Mail));
+	memset(timeArr, 0, sizeof(timeArr));
+	memset(timeAns, 0, sizeof(timeAns));
 }
 
 void Input()
 {
-	cin >> N >> A >> B;
-	for (int i = 0; i < N; i++) {
-		int a; cin >> a;
-		Mail[a] = true;
+	cin >> n >> a >> b;
+	for (int i = 0; i < n; i++) {
+		int temp; cin >> temp;
+		timeArr[temp] = true;
 	}
 }
 
 void Solution()
 {
-	queue<int>Q;
-	int Finish = 0;
+	queue<int>q;
+	int fin = 0;
 	int Time = 0;
-	int Idx = 0;
-	while (1) {
-		if (Finish == N)break;
-		if (Time < MAX && Mail[Time] == true)
-			Q.push(Time);
-		int Mail_Cnt = Q.size();
-		if (Mail_Cnt == 0) {
+	int idx = 0;
+	while (true) {
+		if (fin == n)break;
+		if (timeArr[Time])
+			q.push(Time);
+		if (q.empty()) {
 			Time++;
 			continue;
 		}
-		if (Mail_Cnt == A || Q.front() == Time - B) {
-			int Read_Cnt = (Q.size() / 2) + (Q.size() % 2);
-			for (int i = 0; i < Read_Cnt; i++) {
-				Q.pop();
-				Answer[Idx++] = Time;
-				Finish++;
+		else {
+			if (q.size() == a || Time - b == q.front()) {
+				int Size = q.size() / 2 + q.size() % 2;
+				for (int i = 0; i < Size; i++) {
+					timeAns[idx++] = Time;
+					q.pop();
+					fin++;
+				}
 			}
 		}
 		Time++;
@@ -54,15 +53,15 @@ void Solution()
 
 void Solve()
 {
-	int Tc; cin >> Tc;
-	for (int T = 1; T <= Tc; T++) {
+	int tc; cin >> tc;
+	for (int i = 1; i <= tc; i++) {
 		Initialize();
 		Input();
 		Solution();
-
-		cout << "#" << T << " ";
-		for (int i = 0; i < N; i++)
-			cout << Answer[i] << " ";
+		cout << "#" << i << " ";
+		for (int j = 0; j < n; j++) {
+			cout << timeAns[j] << " ";
+		}
 		cout << endl;
 	}
 }
@@ -71,8 +70,6 @@ int main()
 {
 	ios::sync_with_stdio(0);
 	cin.tie(NULL); cout.tie(NULL);
-
-	freopen("input.txt", "r", stdin);
 	Solve();
 	return 0;
 }

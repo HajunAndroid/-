@@ -6,7 +6,7 @@
 using namespace std;
 
 long long Answer;
-bool Select[3];
+bool visit[3];
 vector<char> Operator, Priority;
 vector<long long> Number;
 map<int, char> Oper_Type;
@@ -67,12 +67,12 @@ void DFS(int Cnt)
 		return;
 	}
 	for (int i = 0; i < 3; i++) {
-		if (Select[i] == true)continue;
-		Select[i] = true;
+		if (visit[i] == true)continue;
+		visit[i] = true;
 		Priority.push_back(Oper_Type[i]);
 		DFS(Cnt + 1);
 		Priority.pop_back();
-		Select[i] = false;
+		visit[i] = false;
 	}
 }
 

@@ -7,7 +7,7 @@ using namespace std;
 
 int n, sum, ans;
 int arr[MAX];
-bool select[MAX];
+bool visit[MAX];
 
 int Exp[] = { 1,2,4,8,16,32,64,128,256,512 };
 int factorial[] = { 0,1,2,6,24,120,720,5040,40320,362880 };
@@ -16,7 +16,7 @@ void Initialize()
 {
 	ans = 0;
 	sum = 0;
-	memset(select, false, sizeof(select));
+	memset(visit, false, sizeof(visit));
 }
 
 void Input()
@@ -31,7 +31,7 @@ void Input()
 void DFS(int cnt, int left, int right)
 {
 	if (cnt == n) {
-		ans++;
+		ans++; 
 		return;
 	}
 	if (left >= sum - left) {
@@ -39,12 +39,13 @@ void DFS(int cnt, int left, int right)
 		return;
 	}
 	for (int i = 0; i < n; i++) {
-		if (select[i] == true)continue;
-		select[i] = true;
+		if (visit[i])continue;
+		visit[i] = true;
 		DFS(cnt + 1, left + arr[i], right);
-		if (left >= right + arr[i])
+		if (left >= right + arr[i]) {
 			DFS(cnt + 1, left, right + arr[i]);
-		select[i] = false;
+		}
+		visit[i] = false;
 	}
 }
 
@@ -60,7 +61,8 @@ void Solve()
 		Initialize();
 		Input();
 		Solution();
-		cout << "#" << tc << " " << ans << endl;
+
+		cout << "#" << i << " " << ans << endl;
 	}
 }
 

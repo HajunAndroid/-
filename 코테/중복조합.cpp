@@ -3,19 +3,19 @@
 using namespace std;
 
 int arr[6];
-int select[3];
+int visit[3];
 
 void DFS(int idx, int cnt)
 {
 	if (cnt == 3) {
 		for (int i = 0; i < 3; i++) {
-			cout << select[i] << " ";
+			cout << visit[i] << " ";
 		}
 		cout << endl;
 		return;
 	}
 	for (int i = idx; i <= 5; i++) {
-		select[cnt] = arr[i];
+		visit[cnt] = arr[i];
 		DFS(i, cnt + 1);
 	}
 }
