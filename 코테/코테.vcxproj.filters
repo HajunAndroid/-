@@ -552,6 +552,18 @@
     <ClCompile Include="이진탐색_수찾기.cpp">
       <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
+    <ClCompile Include="re_Queue.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_진법변환.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_투포인터_수들의합2.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_이진탐색_수찾기.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
