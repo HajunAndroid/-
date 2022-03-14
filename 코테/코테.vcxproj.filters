@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\2022New">
       <UniqueIdentifier>{30eddcd8-e5e1-4e48-a4d2-62913aeb8b7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\SK hynix">
+      <UniqueIdentifier>{3efb752d-fd56-4b59-9bc7-463f5d8684cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="로또.cpp">
@@ -530,6 +533,24 @@
     </ClCompile>
     <ClCompile Include="2022_중복순열.cpp">
       <Filter>소스 파일\2022RE</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue_Self.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="진법변환.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="투포인터_수들의합2.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="이진탐색_수찾기.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
