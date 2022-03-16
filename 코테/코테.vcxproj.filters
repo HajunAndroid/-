@@ -582,6 +582,27 @@
     <ClCompile Include="배.cpp">
       <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
+    <ClCompile Include="re_nqueens.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_알파벳.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_암호만들기.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_외판원순회2.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_소수경로.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_수들의합2.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_부분합.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
