@@ -564,6 +564,24 @@
     <ClCompile Include="re_이진탐색_수찾기.cpp">
       <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
+    <ClCompile Include="re_공유기설치.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_중량제한.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="re_가장긴증가하는부분수열.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="연속합.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="부분수열의합.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="배.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
