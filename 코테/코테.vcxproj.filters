@@ -603,6 +603,18 @@
     <ClCompile Include="re_부분합.cpp">
       <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
+    <ClCompile Include="rere_알파벳.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_암호만들기.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_소수경로.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_수들의합2.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
