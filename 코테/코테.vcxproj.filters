@@ -615,6 +615,21 @@
     <ClCompile Include="rere_수들의합2.cpp">
       <Filter>소스 파일\SK hynix</Filter>
     </ClCompile>
+    <ClCompile Include="rere_queue.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_우편함.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_혁진이의검증프로그램.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_종구의딸이름짓기.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
+    <ClCompile Include="rere_준환이의양팔저울.cpp">
+      <Filter>소스 파일\SK hynix</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
